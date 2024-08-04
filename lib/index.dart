@@ -1,0 +1,19 @@
+// Export pages
+export '/components/pages/login_page/login_page_widget.dart'
+    show LoginPageWidget;
+export '/components/pages/register_account/register_account_widget.dart'
+    show RegisterAccountWidget;
+export '/components/pages/complete_profile/complete_profile_widget.dart'
+    show CompleteProfileWidget;
+export '/components/pages/forgot_password/forgot_password_widget.dart'
+    show ForgotPasswordWidget;
+export '/components/pages/onboarding/onboarding_widget.dart'
+    show OnboardingWidget;
+export '/components/pages/m_y_profile_page/m_y_profile_page_widget.dart'
+    show MYProfilePageWidget;
+export '/components/pages/edit_profile/edit_profile_widget.dart'
+    show EditProfileWidget;
+export '/components/pages/change_password/change_password_widget.dart'
+    show ChangePasswordWidget;
+export '/components/pages/articlesearch/articlesearch_widget.dart'
+    show ArticlesearchWidget;
