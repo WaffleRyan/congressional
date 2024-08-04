@@ -157,11 +157,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Anmeldung',
       'es': 'Acceso',
     },
-    '1zqiw31h': {
+    'zop0p8bd': {
+      'en': 'Continue with Google',
+      'ar': '',
+      'de': '',
+      'es': '',
+    },
+    'unf8g2q1': {
       'en': 'Continue as a Guest',
-      'ar': 'تواصل كضيف',
-      'de': 'Als Gast fortfahren',
-      'es': 'Continua como invitado',
+      'ar': '',
+      'de': '',
+      'es': '',
     },
     'cjqb8ial': {
       'en': 'Don\'t have an account?      ',
@@ -250,11 +256,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'de': 'Sie haben bereits ein Konto?',
       'es': '¿Ya tienes una cuenta?',
     },
-    '3ugmx2zp': {
-      'en': 'Continue as Guest',
-      'ar': 'تواصل كضيف',
-      'de': 'Als Gast fortfahren',
-      'es': 'Continua como invitado',
+    '236qb4cx': {
+      'en': 'Continue with Google',
+      'ar': '',
+      'de': '',
+      'es': '',
+    },
+    'zskqt2dm': {
+      'en': 'Continue as a Guest',
+      'ar': '',
+      'de': '',
+      'es': '',
     },
     'momge5oj': {
       'en': 'Home',
@@ -629,6 +641,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8o86xtct': {
       'en': 'Constitution',
+      'ar': '',
+      'de': '',
+      'es': '',
+    },
+    'nxoot3mm': {
+      'en': 'Tweets',
       'ar': '',
       'de': '',
       'es': '',

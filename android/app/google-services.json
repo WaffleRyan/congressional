@@ -7,12 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1079339227982:android:ad6e3a3483a40c52869c1f",
+        "mobilesdk_app_id": "1:1079339227982:android:3589038e25346791869c1f",
         "android_client_info": {
-          "package_name": "com.flutterflow.finwallet"
+          "package_name": "com.flutterflow.congressional"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1079339227982-hsk9l19i2a23kvclje806sji46lk0535.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.congressional",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "1079339227982-n1i5cvegd8qv6healjgi4n9vb02q4ma6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCJXIJV_kqq5KMKe81zYgfEady34lc3dpk"
@@ -20,7 +33,63 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079339227982-n1i5cvegd8qv6healjgi4n9vb02q4ma6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1079339227982-ce0bmtvmtn72fg06fspffo3qbb1nfve9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.finwallet"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079339227982:android:ad6e3a3483a40c52869c1f",
+        "android_client_info": {
+          "package_name": "com.flutterflow.finwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079339227982-4hv96tmbr91ug1vbnmgc8q8jlugr6s97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.finwallet",
+            "certificate_hash": "6db9f35b3216af7865b7710320d14e5c97a66bad"
+          }
+        },
+        {
+          "client_id": "1079339227982-n1i5cvegd8qv6healjgi4n9vb02q4ma6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJXIJV_kqq5KMKe81zYgfEady34lc3dpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079339227982-n1i5cvegd8qv6healjgi4n9vb02q4ma6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1079339227982-ce0bmtvmtn72fg06fspffo3qbb1nfve9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.finwallet"
+              }
+            }
+          ]
         }
       }
     }

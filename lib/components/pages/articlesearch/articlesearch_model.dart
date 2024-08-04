@@ -15,10 +15,11 @@ class ArticlesearchModel extends FlutterFlowModel<ArticlesearchWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
+  // State field(s) for ArticleSearchField widget.
+  FocusNode? articleSearchFieldFocusNode;
+  TextEditingController? articleSearchFieldTextController;
+  String? Function(BuildContext, String?)?
+      articleSearchFieldTextControllerValidator;
   // State field(s) for ChoiceChips widget.
   FormFieldController<List<String>>? choiceChipsValueController;
   String? get choiceChipsValue =>
@@ -32,7 +33,7 @@ class ArticlesearchModel extends FlutterFlowModel<ArticlesearchWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
+    articleSearchFieldFocusNode?.dispose();
+    articleSearchFieldTextController?.dispose();
   }
 }

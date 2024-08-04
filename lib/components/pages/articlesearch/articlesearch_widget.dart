@@ -29,8 +29,8 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
     super.initState();
     _model = createModel(context, () => ArticlesearchModel());
 
-    _model.textController ??= TextEditingController();
-    _model.textFieldFocusNode ??= FocusNode();
+    _model.articleSearchFieldTextController ??= TextEditingController();
+    _model.articleSearchFieldFocusNode ??= FocusNode();
   }
 
   @override
@@ -67,13 +67,15 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
               ),
               child: Padding(
                 padding: EdgeInsets.all(2.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50.0),
-                  child: Image.network(
-                    'https://picsum.photos/seed/626/600',
-                    width: 300.0,
-                    height: 200.0,
-                    fit: BoxFit.cover,
+                child: AuthUserStreamWidget(
+                  builder: (context) => ClipRRect(
+                    borderRadius: BorderRadius.circular(50.0),
+                    child: Image.network(
+                      currentUserPhoto,
+                      width: 300.0,
+                      height: 200.0,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
               ),
@@ -128,15 +130,18 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 8.0),
                     child: TextFormField(
-                      controller: _model.textController,
-                      focusNode: _model.textFieldFocusNode,
+                      controller: _model.articleSearchFieldTextController,
+                      focusNode: _model.articleSearchFieldFocusNode,
                       onFieldSubmitted: (_) async {
                         await RequestsRecord.collection
                             .doc()
                             .set(createRequestsRecordData(
                               type: 'article',
                               topic: _model.choiceChipsValue,
-                              text: _model.textController.text,
+                              text: valueOrDefault<String>(
+                                _model.articleSearchFieldTextController.text,
+                                'wrong',
+                              ),
                             ));
                       },
                       autofocus: true,
@@ -195,8 +200,9 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
                             letterSpacing: 0.0,
                           ),
                       cursorColor: FlutterFlowTheme.of(context).primary,
-                      validator:
-                          _model.textControllerValidator.asValidator(context),
+                      validator: _model
+                          .articleSearchFieldTextControllerValidator
+                          .asValidator(context),
                     ),
                   ),
                   SingleChildScrollView(
@@ -223,6 +229,9 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
                               )),
                               ChipData(FFLocalizations.of(context).getText(
                                 '8o86xtct' /* Constitution */,
+                              )),
+                              ChipData(FFLocalizations.of(context).getText(
+                                'nxoot3mm' /* Tweets */,
                               ))
                             ],
                             onChanged: (val) async {
@@ -233,7 +242,8 @@ class _ArticlesearchWidgetState extends State<ArticlesearchWidget> {
                                   .set(createRequestsRecordData(
                                     type: 'article',
                                     topic: _model.choiceChipsValue,
-                                    text: _model.textController.text,
+                                    text: _model
+                                        .articleSearchFieldTextController.text,
                                   ));
                             },
                             selectedChipStyle: ChipStyle(

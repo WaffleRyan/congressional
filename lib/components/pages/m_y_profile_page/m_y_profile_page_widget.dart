@@ -120,15 +120,17 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                                 ),
                                 child: Padding(
                                   padding: EdgeInsets.all(2.0),
-                                  child: Container(
-                                    width: 60.0,
-                                    height: 60.0,
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                    ),
-                                    child: Image.asset(
-                                      'assets/images/avatar.png',
+                                  child: AuthUserStreamWidget(
+                                    builder: (context) => Container(
+                                      width: 60.0,
+                                      height: 60.0,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Image.network(
+                                        currentUserPhoto,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -228,7 +230,7 @@ class _MYProfilePageWidgetState extends State<MYProfilePageWidget> {
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   4.0, 8.0, 0.0, 0.0),
                               child: Text(
-                                mYProfilePageUsersRecord.email,
+                                ' |  ${currentUserEmail}',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
